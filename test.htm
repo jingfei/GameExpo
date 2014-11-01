@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Program Design II</title>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<style>
+html, body{
+	min-height:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	background-color: #F2D5BB;
+	color: #DB8775;
+	font-family: 'Montserrat', sans-serif;
+	overflow-x: hidden;
+}
+
+#left{
+	width: 280px;
+	height: 100%;
+	z-index: 999;
+	color: #F8DDBE;
+	padding: 10px;
+	display: inline-block;
+	position: fixed;
+	background-color: #8C4A32;
+	cursor: default;
+}
+#list li{
+	cursor: pointer;
+}
+#list li:hover{
+	background-color: #BF834E;
+}
+#main{
+	width: 1100px;
+	display: inline-block;
+	position: absolute;
+	left: 280px;
+	padding: 50px;
+}
+.works{
+	border: 1px solid black;
+	border-collapse: separate;
+    border-spacing: 0;
+	border-radius: 10px;
+    -moz-border-radius: 10px;
+	width: 90%;
+	margin: 50px 0;
+}
+.works_img{
+	width:200px;
+	display: inline-block;
+	margin: 10px;
+}
+.works_img img{width:100%;}
+.works_text{
+	display: inline-block;
+	padding-left: 10px;
+	margin: 10px;
+}
+	</style>
+</head>
+<body>
+	<div id="left">
+		<hr style="width:260px; border:8px solid #F8DDBE;"/>
+		<div style="font-size:2.5em; width:100%;">
+			Program
+			<div style="width:100%;text-align:right">Design II &nbsp;&nbsp;</div> 
+			<br/>
+		</div>
+		<div id="list">
+			<hr style="border:1px solid #F8DDBE;"/>
+			<span style="font-size:1.7em;">GAMES EXHIBITION</span>
+			<hr style="border:1px solid #F8DDBE;"/>
+			<ul type="none" style="margin:0;padding:0;font-size:1.6em;">
+				<li>About Course</li>
+				<li>Works</li>
+				<ul type="none" style="margin:0;font-size:0.9em;">
+					<li>Down Stairs</li>
+					<li>Snake</li>
+					<li>Tetris</li>
+					<li>Minesweeper</li>
+				</ul>
+				<li>Contact</li>
+			</ul>
+			<hr style="border:1px solid #F8DDBE;"/>
+		</div>
+		<div style="font-size:1.3em;margin-top:220px;">
+			<hr style="border:1px solid #F8DDBE;"/>
+			Copyright ©<br/>
+			<div style="width:100%;text-align:right">Meng-Hsun, Banana</div>
+		</div>
+		<img src="text2.png" style="z-index:-1;position:absolute;width:230px;top:120px;left:70px;"/>
+	</div>
+	
+	<div id="main">
+		<table class="works" style="margin-top:0">
+		<tr >
+			<td class="works_img">
+				<img src="pic.png"/>
+			</td>
+			<td class="works_text">
+				<div style="font-size: 2.5em">Title</div>
+				<div style="font-size: 1.5em">Author</div>
+				<div style="font-size: 1.5em">subtitle</div>
+			</td>
+		</tr>
+		</table>
+		<table class="works" >
+		<tr >
+			<td class="works_img">
+				<img src="pic.png"/>
+			</td>
+			<td class="works_text">
+				<div style="font-size: 2.5em">Title</div>
+				<div style="font-size: 1.5em">Author</div>
+				<div style="font-size: 1.5em">subtitle</div>
+			</td>
+		</tr>
+		</table>
+		<table class="works" >
+		<tr >
+			<td class="works_img">
+				<img src="pic.png"/>
+			</td>
+			<td class="works_text">
+				<div style="font-size: 2.5em">Title</div>
+				<div style="font-size: 1.5em">Author</div>
+				<div style="font-size: 1.5em">subtitle</div>
+			</td>
+		</tr>
+		</table>
+		<table class="works" >
+		<tr >
+			<td class="works_img">
+				<img src="pic.png"/>
+			</td>
+			<td class="works_text">
+				<div style="font-size: 2.5em">Title</div>
+				<div style="font-size: 1.5em">Author</div>
+				<div style="font-size: 1.5em">subtitle</div>
+			</td>
+		</tr>
+		</table>
+		<table class="works" >
+		<tr >
+			<td class="works_img">
+				<img src="pic.png"/>
+			</td>
+			<td class="works_text">
+				<div style="font-size: 2.5em">Title</div>
+				<div style="font-size: 1.5em">Author</div>
+				<div style="font-size: 1.5em">subtitle</div>
+			</td>
+		</tr>
+		</table>
+		<table class="works" >
+		<tr >
+			<td class="works_img">
+				<img src="pic.png"/>
+			</td>
+			<td class="works_text">
+				<div style="font-size: 2.5em">Title</div>
+				<div style="font-size: 1.5em">Author</div>
+				<div style="font-size: 1.5em">subtitle</div>
+			</td>
+		</tr>
+		</table>
+	</div>
+</body>
+</html>
