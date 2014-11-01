@@ -1,139 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Program Design II</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css' />
-	<link href='test.css' rel='stylesheet' type='text/css' />
-	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="jquery.zaccordion.js"></script>
-	<style>
-/* main column */
-#main{
-	display: inline-block;
-	position: absolute;
-	left: 300px;
-	padding: 30px;
-}
-.imgWork {
-	display:inline-block;
-	position: relative;
-	z-index: 30;
-	cursor:pointer;
-	padding: 10px;
-}
-.Image{
-	width:300px;
-	height: 185px;
-	position:absolute;
-	top:25px;
-	left:79px;
-}
-.Text{
-	text-align: left;
-	padding: 10px;
-	width:280px;
-	height:165px;
-	display:none;
-	background-color:#8C4A32;
-	position:absolute;
-	z-index: 20;
-	top: 25px;
-	left:79px;
-	opacity: 0.9;
-}
-#featured img{
-	height: 310px;
-	margin: 10px;
-}
-#featured {
-	background-color:rgba(140,74,50,0.5);
-	bottom:0;
-	height:100px;
-	left:0;
-	position:
-	absolute;
-	width:100%;
-	z-index:10;
-}
-#featured .slider-closed {width:100px;}
-#featured strong {color:#fff;display:block;margin-bottom:5px;padding:10px 10px 0;text-shadow:none;}
-#featured p {color:#fff;display:block;font-size:14px;padding:0 10px;text-shadow:none;}
-#featured .slider-open strong {color:#fff;font-size:22px;}
-#featured .slider-closed strong {font-size:18px;margin-bottom:5px;}
-#featured .slider-closed p {display:none;}
-
-	</style>
-	<script>
-$( document ).ready(function() {
-  $('.imgWork')
-	.mouseenter(function(){
-		$(this).children(".Image").css("z-index","10");
-		var Text = $(this).children(".Text");
-		$(Text).fadeIn("fast");		
-	})
-	.mouseleave(function(){
-		var Text = $(this).children(".Text");
-		$(Text).fadeOut("slow");		
-		
-	});
-	var WIDTH = $( window ).width()-350;
-	$("#featured").zAccordion({
-		tabWidth: 100,
-		speed: 650,
-		slideClass: 'slider',
-		animationStart: function () {
-			$('#slider').find('li.slider-open div').css('display', 'none');
-			$('#slider').find('li.slider-previous div').css('display', 'none');
-		},
-		animationComplete: function () {
-			$('#slider').find('li div').fadeIn(600);
-		},
-		width: WIDTH,
-		height: 450
-	});
-    $('#left').click(function(){
-		window.location.href = 'test.htm';
-    });
-});
-	</script>
+	<link rel="import" href="head.htm"/>
 </head>
 <body>
-	<div id="left">
-		<hr style="width:260px; border:8px solid #F8DDBE;"/>
-		<div style="font-size:2.5em; width:100%;">
-			Program
-			<div style="width:100%;text-align:right">Design II &nbsp;&nbsp;</div> 
-			<br/>
-		</div>
-		<div id="list">
-			<hr style="border:1px solid #F8DDBE;"/>
-			<span style="font-size:1.7em;">GAMES EXHIBITION</span>
-			<hr style="border:1px solid #F8DDBE;"/>
-			<ul type="none" style="margin:0;padding:0;font-size:1.6em;">
-				<li>About Course</li>
-				<li>Works</li>
-				<ul type="none" style="margin:0;font-size:0.9em;">
-					<li>Down Stairs</li>
-					<li>Snake</li>
-					<li>Tetris</li>
-					<li>Minesweeper</li>
-				</ul>
-				<li>Contact</li>
-			</ul>
-			<hr style="border:1px solid #F8DDBE;"/>
-		</div>
-		<div style="font-size:1.3em;bottom:30px;position:absolute;width:280px;">
-			<div id="Search">
-				<input type="text" id="SearchText" size="10" maxlength="120" placeholder="Search Works" /><input type="submit" value=" " id="SearchButton" />
-			</div>
-			<hr style="border:1px solid #F8DDBE;"/>
-			Copyright ©<br/>
-			<div style="width:100%;text-align:right">Meng-Hsun, Banana</div>
-		</div>
-		<img src="text2.png" style="z-index:-1;position:absolute;width:230px;top:120px;left:70px;"/>
-	</div>
-	
+	<div id="left"></div>
 	<div id="main">
 		<div class="imgWork" style="vertical-align:middle;">
 			<img src="laptop-frame.png" style="z-index:999;width:440px;"/>
@@ -221,4 +92,85 @@ $( document ).ready(function() {
 		<hr/>
 	</div>
 </body>
+
+<style>
+.imgWork {
+	display:inline-block;
+	position: relative;
+	z-index: 30;
+	cursor:pointer;
+	padding: 10px;
+}
+.Image{
+	width:300px;
+	height: 185px;
+	position:absolute;
+	top:25px;
+	left:79px;
+}
+.Text{
+	text-align: left;
+	padding: 10px;
+	width:280px;
+	height:165px;
+	display:none;
+	background-color:#8C4A32;
+	position:absolute;
+	z-index: 20;
+	top: 25px;
+	left:79px;
+	opacity: 0.9;
+}
+#featured img{
+	height: 310px;
+	margin: 10px;
+}
+#featured {
+	background-color:rgba(140,74,50,0.5);
+	bottom:0;
+	height:100px;
+	left:0;
+	position:
+	absolute;
+	width:100%;
+	z-index:10;
+}
+#featured .slider-closed {width:100px;}
+#featured strong {color:#fff;display:block;margin-bottom:5px;padding:10px 10px 0;text-shadow:none;}
+#featured p {color:#fff;display:block;font-size:14px;padding:0 10px;text-shadow:none;}
+#featured .slider-open strong {color:#fff;font-size:22px;}
+#featured .slider-closed strong {font-size:18px;margin-bottom:5px;}
+#featured .slider-closed p {display:none;}
+
+</style>
+<script>
+$( document ).ready(function() {
+  var WIDTH = $( window ).width()-350;
+  $('.imgWork')
+	.mouseenter(function(){
+		$(this).children(".Image").css("z-index","10");
+		var Text = $(this).children(".Text");
+		$(Text).fadeIn("fast");		
+	})
+	.mouseleave(function(){
+		var Text = $(this).children(".Text");
+		$(Text).fadeOut("slow");		
+		
+	});
+  $("#featured").zAccordion({
+		tabWidth: 100,
+		speed: 650,
+		slideClass: 'slider',
+		animationStart: function () {
+			$('#slider').find('li.slider-open div').css('display','none');
+			$('#slider').find('li.slider-previous div').css('display','none');
+		},
+		animationComplete: function () {
+			$('#slider').find('li div').fadeIn(600);
+		},
+		width: WIDTH,
+		height: 450
+  });
+});
+</script>
 </html>

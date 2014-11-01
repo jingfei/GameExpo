@@ -30,6 +30,14 @@ html, body{
 	background-color: #BF834E;
 }
 
+/* main column */
+#main{
+	display: inline-block;
+	position: absolute;
+	left: 300px;
+	padding: 30px;
+}
+
 /* works */
 .works{
 	border: 1px solid black;
