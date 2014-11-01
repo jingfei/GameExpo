@@ -2,64 +2,77 @@
 <html>
 <head>
 	<title>Program Design II</title>
-	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css' />
+	<link href='test.css' rel='stylesheet' type='text/css' />
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<style>
-html, body{
-	min-height:100%;
-	height:100%;
-	margin:0;
-	padding:0;
-	background-color: #F2D5BB;
-	color: #DB8775;
-	font-family: 'Montserrat', sans-serif;
-	overflow-x: hidden;
-}
-
-#left{
-	width: 280px;
-	height: 100%;
-	z-index: 999;
-	color: #F8DDBE;
-	padding: 10px;
-	display: inline-block;
-	position: fixed;
-	background-color: #8C4A32;
-	cursor: default;
-}
-#list li{
-	cursor: pointer;
-}
-#list li:hover{
-	background-color: #BF834E;
-}
+/* main column */
 #main{
-	width: 1100px;
 	display: inline-block;
 	position: absolute;
-	left: 280px;
-	padding: 50px;
+	left: 300px;
+	padding: 30px;
 }
-.works{
-	border: 1px solid black;
-	border-collapse: separate;
-    border-spacing: 0;
+.imgWork {
+	display:inline-block;
+	position: relative;
+	width:440px;
+	height:300px;
+	z-index: 30;
+	cursor:pointer;
+	background-color: #DB8775;
+	padding: 10px;
 	border-radius: 10px;
-    -moz-border-radius: 10px;
-	width: 90%;
-	margin: 50px 0;
-}
-.works_img{
-	width:200px;
-	display: inline-block;
 	margin: 10px;
 }
-.works_img img{width:100%;}
-.works_text{
-	display: inline-block;
-	padding-left: 10px;
-	margin: 10px;
+.Image{
+	width:300px;
+	height: 185px;
+	position:absolute;
+	top:25px;
+	left:79px;
 }
+.Text{
+	text-align: left;
+	padding: 10px;
+	width:280px;
+	height:165px;
+	display:none;
+	background-color:#8C4A32;
+	position:absolute;
+	z-index: 20;
+	top: 25px;
+	left:79px;
+	opacity: 0.9;
+}
+.detail{
+	padding:10px;
+	top: 250px;
+	position: absolute;
+	color: #8C4A32;
+	font-weight: bold;
+}
+#container{text-align:center;}
 	</style>
+	<script>
+$( document ).ready(function() {
+  $('.imgWork')
+	.mouseenter(function(){
+		$(this).children(".Image").css("z-index","10");
+		var Text = $(this).children(".Text");
+		$(Text).fadeIn("fast");		
+	})
+	.mouseleave(function(){
+		var Text = $(this).children(".Text");
+		$(Text).fadeOut("slow");		
+		
+	})
+	.click(function(){
+		window.location.href = 'test2.htm';
+	});
+})
+	</script>
 </head>
 <body>
 	<div id="left">
@@ -86,7 +99,10 @@ html, body{
 			</ul>
 			<hr style="border:1px solid #F8DDBE;"/>
 		</div>
-		<div style="font-size:1.3em;margin-top:220px;">
+		<div style="font-size:1.3em;bottom:30px;position:absolute;width:280px;">
+			<div id="Search">
+				<input type="text" id="SearchText" size="10" maxlength="120" placeholder="Search Works" /><input type="submit" value=" " id="SearchButton" />
+			</div>
 			<hr style="border:1px solid #F8DDBE;"/>
 			Copyright ©<br/>
 			<div style="width:100%;text-align:right">Meng-Hsun, Banana</div>
@@ -95,6 +111,225 @@ html, body{
 	</div>
 	
 	<div id="main">
+	<div id="container">
+		<div class="imgWork">
+			<img src="laptop-frame.png" style="z-index:999;width:440px;"/>
+			<img class="Image" src="pic.png"/>
+			<div class="Text">
+				<div style="font-size: 2.5em">Title</div><br/>
+				<div style="font-size: 1.5em">Author</div><br/>
+				<div style="font-size: 1.5em">subtitle</div><br/>
+			</div>
+			<div class="detail">
+				作品名稱：作品簡介
+			</div>
+		</div>
+		<div class="imgWork">
+			<img src="laptop-frame.png" style="z-index:999;width:440px;"/>
+			<img class="Image" src="pic.png"/>
+			<div class="Text">
+				<div style="font-size: 2.5em">Title</div><br/>
+				<div style="font-size: 1.5em">Author</div><br/>
+				<div style="font-size: 1.5em">subtitle</div><br/>
+			</div>
+			<div class="detail">
+				作品名稱：作品簡介
+			</div>
+		</div>
+		<div class="imgWork">
+			<img src="laptop-frame.png" style="z-index:999;width:440px;"/>
+			<img class="Image" src="pic.png"/>
+			<div class="Text">
+				<div style="font-size: 2.5em">Title</div><br/>
+				<div style="font-size: 1.5em">Author</div><br/>
+				<div style="font-size: 1.5em">subtitle</div><br/>
+			</div>
+			<div class="detail">
+				作品名稱：作品簡介
+			</div>
+		</div>
+		<div class="imgWork">
+			<img src="laptop-frame.png" style="z-index:999;width:440px;"/>
+			<img class="Image"src="pic.png" />
+			<div class="Text">
+				<div style="font-size: 2.5em">Title</div><br/>
+				<div style="font-size: 1.5em">Author</div><br/>
+				<div style="font-size: 1.5em">subtitle</div><br/>
+			</div>
+			<div class="detail">
+				作品名稱：作品簡介
+			</div>
+		</div>
+		<div class="imgWork">
+			<img src="laptop-frame.png" style="z-index:999;width:440px;"/>
+			<img class="Image" src="pic.png"/>
+			<div class="Text">
+				<div style="font-size: 2.5em">Title</div><br/>
+				<div style="font-size: 1.5em">Author</div><br/>
+				<div style="font-size: 1.5em">subtitle</div><br/>
+			</div>
+			<div class="detail">
+				作品名稱：作品簡介
+			</div>
+		</div>
+		<div class="imgWork">
+			<img src="laptop-frame.png" style="z-index:999;width:440px;"/>
+			<img class="Image" src="pic.png"/>
+			<div class="Text">
+				<div style="font-size: 2.5em">Title</div><br/>
+				<div style="font-size: 1.5em">Author</div><br/>
+				<div style="font-size: 1.5em">subtitle</div><br/>
+			</div>
+			<div class="detail">
+				作品名稱：作品簡介
+			</div>
+		</div>
+		<div class="imgWork">
+			<img src="laptop-frame.png" style="z-index:999;width:440px;"/>
+			<img class="Image"src="pic.png" />
+			<div class="Text">
+				<div style="font-size: 2.5em">Title</div><br/>
+				<div style="font-size: 1.5em">Author</div><br/>
+				<div style="font-size: 1.5em">subtitle</div><br/>
+			</div>
+			<div class="detail">
+				作品名稱：作品簡介
+			</div>
+		</div>
+		<div class="imgWork">
+			<img src="laptop-frame.png" style="z-index:999;width:440px;"/>
+			<img class="Image" src="pic.png" />
+			<div class="Text">
+				<div style="font-size: 2.5em">Title</div><br/>
+				<div style="font-size: 1.5em">Author</div><br/>
+				<div style="font-size: 1.5em">subtitle</div><br/>
+			</div>
+			<div class="detail">
+				作品名稱：作品簡介
+			</div>
+		</div>
+		<div class="imgWork">
+			<img src="laptop-frame.png" style="z-index:999;width:440px;"/>
+			<img class="Image" src="pic.png" />
+			<div class="Text">
+				<div style="font-size: 2.5em">Title</div><br/>
+				<div style="font-size: 1.5em">Author</div><br/>
+				<div style="font-size: 1.5em">subtitle</div><br/>
+			</div>
+			<div class="detail">
+				作品名稱：作品簡介
+			</div>
+		</div>
+		<div class="imgWork">
+			<img src="laptop-frame.png" style="z-index:999;width:440px;"/>
+			<img class="Image"src="pic.png" />
+			<div class="Text">
+				<div style="font-size: 2.5em">Title</div><br/>
+				<div style="font-size: 1.5em">Author</div><br/>
+				<div style="font-size: 1.5em">subtitle</div><br/>
+			</div>
+			<div class="detail">
+				作品名稱：作品簡介
+			</div>
+		</div>
+		<div class="imgWork">
+			<img src="laptop-frame.png" style="z-index:999;width:440px;"/>
+			<img class="Image" src="pic.png" />
+			<div class="Text">
+				<div style="font-size: 2.5em">Title</div><br/>
+				<div style="font-size: 1.5em">Author</div><br/>
+				<div style="font-size: 1.5em">subtitle</div><br/>
+			</div>
+			<div class="detail">
+				作品名稱：作品簡介
+			</div>
+		</div>
+		<div class="imgWork">
+			<img src="laptop-frame.png" style="z-index:999;width:440px;"/>
+			<img class="Image" src="pic.png" />
+			<div class="Text">
+				<div style="font-size: 2.5em">Title</div><br/>
+				<div style="font-size: 1.5em">Author</div><br/>
+				<div style="font-size: 1.5em">subtitle</div><br/>
+			</div>
+			<div class="detail">
+				作品名稱：作品簡介
+			</div>
+		</div>
+		<div class="imgWork">
+			<img src="laptop-frame.png" style="z-index:999;width:440px;"/>
+			<img class="Image"src="pic.png" />
+			<div class="Text">
+				<div style="font-size: 2.5em">Title</div><br/>
+				<div style="font-size: 1.5em">Author</div><br/>
+				<div style="font-size: 1.5em">subtitle</div><br/>
+			</div>
+			<div class="detail">
+				作品名稱：作品簡介
+			</div>
+		</div>
+		<div class="imgWork">
+			<img src="laptop-frame.png" style="z-index:999;width:440px;"/>
+			<img class="Image" src="pic.png" />
+			<div class="Text">
+				<div style="font-size: 2.5em">Title</div><br/>
+				<div style="font-size: 1.5em">Author</div><br/>
+				<div style="font-size: 1.5em">subtitle</div><br/>
+			</div>
+			<div class="detail">
+				作品名稱：作品簡介
+			</div>
+		</div>
+		<div class="imgWork">
+			<img src="laptop-frame.png" style="z-index:999;width:440px;"/>
+			<img class="Image" src="pic.png" />
+			<div class="Text">
+				<div style="font-size: 2.5em">Title</div><br/>
+				<div style="font-size: 1.5em">Author</div><br/>
+				<div style="font-size: 1.5em">subtitle</div><br/>
+			</div>
+			<div class="detail">
+				作品名稱：作品簡介
+			</div>
+		</div>
+		<div class="imgWork">
+			<img src="laptop-frame.png" style="z-index:999;width:440px;"/>
+			<img class="Image" src="pic.png" />
+			<div class="Text">
+				<div style="font-size: 2.5em">Title</div><br/>
+				<div style="font-size: 1.5em">Author</div><br/>
+				<div style="font-size: 1.5em">subtitle</div><br/>
+			</div>
+			<div class="detail">
+				作品名稱：作品簡介
+			</div>
+		</div>
+		<div class="imgWork">
+			<img src="laptop-frame.png" style="z-index:999;width:440px;"/>
+			<img class="Image" src="pic.png" />
+			<div class="Text">
+				<div style="font-size: 2.5em">Title</div><br/>
+				<div style="font-size: 1.5em">Author</div><br/>
+				<div style="font-size: 1.5em">subtitle</div><br/>
+			</div>
+			<div class="detail">
+				作品名稱：作品簡介
+			</div>
+		</div>
+		<div class="imgWork">
+			<img src="laptop-frame.png" style="z-index:999;width:440px;"/>
+			<img class="Image" src="pic.png" />
+			<div class="Text">
+				<div style="font-size: 2.5em">Title</div><br/>
+				<div style="font-size: 1.5em">Author</div><br/>
+				<div style="font-size: 1.5em">subtitle</div><br/>
+			</div>
+			<div class="detail">
+				作品名稱：作品簡介
+			</div>
+		</div>
+	</div>
+	<!--
 		<table class="works" style="margin-top:0">
 		<tr >
 			<td class="works_img">
@@ -107,66 +342,7 @@ html, body{
 			</td>
 		</tr>
 		</table>
-		<table class="works" >
-		<tr >
-			<td class="works_img">
-				<img src="pic.png"/>
-			</td>
-			<td class="works_text">
-				<div style="font-size: 2.5em">Title</div>
-				<div style="font-size: 1.5em">Author</div>
-				<div style="font-size: 1.5em">subtitle</div>
-			</td>
-		</tr>
-		</table>
-		<table class="works" >
-		<tr >
-			<td class="works_img">
-				<img src="pic.png"/>
-			</td>
-			<td class="works_text">
-				<div style="font-size: 2.5em">Title</div>
-				<div style="font-size: 1.5em">Author</div>
-				<div style="font-size: 1.5em">subtitle</div>
-			</td>
-		</tr>
-		</table>
-		<table class="works" >
-		<tr >
-			<td class="works_img">
-				<img src="pic.png"/>
-			</td>
-			<td class="works_text">
-				<div style="font-size: 2.5em">Title</div>
-				<div style="font-size: 1.5em">Author</div>
-				<div style="font-size: 1.5em">subtitle</div>
-			</td>
-		</tr>
-		</table>
-		<table class="works" >
-		<tr >
-			<td class="works_img">
-				<img src="pic.png"/>
-			</td>
-			<td class="works_text">
-				<div style="font-size: 2.5em">Title</div>
-				<div style="font-size: 1.5em">Author</div>
-				<div style="font-size: 1.5em">subtitle</div>
-			</td>
-		</tr>
-		</table>
-		<table class="works" >
-		<tr >
-			<td class="works_img">
-				<img src="pic.png"/>
-			</td>
-			<td class="works_text">
-				<div style="font-size: 2.5em">Title</div>
-				<div style="font-size: 1.5em">Author</div>
-				<div style="font-size: 1.5em">subtitle</div>
-			</td>
-		</tr>
-		</table>
+	-->
 	</div>
 </body>
 </html>
